@@ -22,6 +22,39 @@ let darkMode = false;
  heading.style.color ="cyan";
  heading.style.background ="pink";
 
+ // Define what happens when button is clicked
+ function toggleMode(){
+    console.log("we triggered the function");
+    //1. Flip the boolean variable to track the mode
+    darkMode = !darkMode
+    console.log(darkMode);
+    //2. Conditionally apply styles depending on mode
+    if (darkMode == true) {
+console.log("were going to apply dark styles");
+      body.style.background = "black";
+      heading.style.color = "blue";
+      description.style.color = "white";
+      description.textContent = "WELCOME TO THE DARK SIDE";
+      toggleBtn.textContent ="Switch to light";
+
+
+    }
+    else{
+console.log(" apply light styles");
+    body.style.background =" gray";
+     heading.style.color = "white";
+      toggleBtn.textContent ="Switch to dark";
+
+   
+    }
+    
+
+ }
+
+ //Attach function to the actual button
+ toggleBtn.addEventListener("click", toggleMode);
+
+
 
 
 
