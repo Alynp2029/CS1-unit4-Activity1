@@ -54,6 +54,32 @@ console.log(" apply light styles");
  //Attach function to the actual button
  toggleBtn.addEventListener("click", toggleMode);
 
+ // REVIEW: making a button interactive
+ // 1, Select HTML elemnts for JS to target
+ const image = document.querySelector("#image");
+ const hackerBtn = document.querySelector("#hacker");
+ // 2. attach your button to your function that triggers when clicked
+ hackerBtn.addEventListener("click", setHacker);
+// Define the function 
+function setHacker(){
+  body.style.background = "black";
+  body.style.fontFamily = "monospace";
+  description.style.color = "rgb(88, 255, 46)"
+  description.textContent = "you have been hacked;(";
+  image.src = "download (2).jpeg";
+
+}
+const shrekBtn = document.querySelector("#shrek");
+shrekBtn.addEventListener("click", setShrek);
+
+function setShrek(){
+  body.style.background = "green";
+  body.style.fontFamily = "monospace";
+  description.style.color = "rgb(20, 86, 4)"
+  description.textContent = "you have been hacked by shrek...;(";
+  image.src = "download (3).jpeg";
+
+}
 
 
 
