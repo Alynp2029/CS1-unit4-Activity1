@@ -32,18 +32,22 @@ let darkMode = false;
     if (darkMode == true) {
 console.log("were going to apply dark styles");
       body.style.background = "black";
-      heading.style.color = "blue";
+      heading.style.color = "white";
       description.style.color = "white";
       description.textContent = "WELCOME TO THE DARK SIDE";
       toggleBtn.textContent ="Switch to light";
+      heading.style.background ="purple";
+      image.src = "download (4).jpeg";
 
 
     }
     else{
 console.log(" apply light styles");
-    body.style.background =" gray";
+    body.style.background ="rgb(255, 248, 199)";
      heading.style.color = "white";
       toggleBtn.textContent ="Switch to dark";
+      heading.style.background ="pink";
+      image.src = "images (6).jpeg";
 
    
     }
@@ -67,6 +71,7 @@ function setHacker(){
   description.style.color = "rgb(88, 255, 46)"
   description.textContent = "you have been hacked;(";
   image.src = "download (2).jpeg";
+  heading.style.background ="green";
 
 }
 const shrekBtn = document.querySelector("#shrek");
@@ -80,6 +85,18 @@ function setShrek(){
   image.src = "download (3).jpeg";
 
 }
+const neighbourBtn = document.querySelector("#neighbour");
+neighbourBtn.addEventListener("click", setNeighbourhood);
+function setNeighbourhood(){
+  body.style.background = "black";
+  description.style.color = "rgb(80, 0, 0)";
+  description.textContent = "youre now in THE NEIGHBOURHOOD mode!;(";
+  image.src = "download.png";
+   heading.style.color ="rgb(80, 0, 0)";
+    heading.style.background ="white";
+
+}
+
 
 
 
